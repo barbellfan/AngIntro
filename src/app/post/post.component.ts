@@ -12,6 +12,8 @@ export class PostComponent implements OnInit {
 
   @Input() fromParent:string = "";
 
+  postMessage: string = "A message for the post list";
+
   constructor() {}
 
   ngOnInit(): void {
