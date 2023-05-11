@@ -12,7 +12,7 @@ export class PostComponent implements OnInit {
 
   @Input() fromParent:string = "";
 
-  postMessage: string = "A message for the post list";
+  postParentMessage: string = "Message coming from the post parent";
 
   constructor() {}
 
