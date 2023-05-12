@@ -9,4 +9,5 @@ import { PostComponent } from './post/post.component';
 })
 export class AppComponent {
   message: string = 'Message from Typescript Component File';
+  imgUrl: string = 'https://smaller-pictures.appspot.com/images/dreamstime_xxl_65780868_small.jpg';
 }
