@@ -14,7 +14,8 @@ export class AppComponent {
     console.log("Button click event worked");
   }
 
-  onKeyUp() {
-    console.log("Enter entered");
+  onKeyUp($event: Event) {
+    console.log(($event.target as HTMLInputElement).value);
+
   }
 }
