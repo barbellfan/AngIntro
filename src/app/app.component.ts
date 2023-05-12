@@ -9,4 +9,8 @@ import { PostComponent } from './post/post.component';
 })
 export class AppComponent {
   bool: boolean = false;
+
+  buttonClick() {
+    console.log("Button click event worked");
+  }
 }
