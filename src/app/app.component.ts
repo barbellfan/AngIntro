@@ -13,4 +13,14 @@ export class AppComponent {
   buttonClick() {
     console.log("Button click event worked");
   }
+
+  onKeyUp($event: KeyboardEvent) {
+    // The keyCode property is deprecated. Use key instead. Note
+    // that 'Enter' is spelled out for that key.
+    if ($event.key == 'Enter') {
+      console.log("Enter entered");
+
+    }
+
+  }
 }
