@@ -8,4 +8,4 @@
 <button (click)="buttonClick()">Click me</button>
 
 <!-- event filtering -->
-<input type="text" (keyup.enter)="onKeyUp($event)" >
+<input type="text" (keyup.enter)="onKeyUp(username.value)" #username >
