@@ -1,4 +1,4 @@
-import { Component, ViewChild, AfterViewInit } from '@angular/core';
+import { Component } from '@angular/core';
 
 import { PostComponent } from './post/post.component';
 
@@ -7,29 +7,6 @@ import { PostComponent } from './post/post.component';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent implements AfterViewInit {
-  title = 'AngIntro';
-  parentMessage: string = 'Message changed';
-  message: string = '';
-  fromChildOutput: string = '';
-
-  @ViewChild(PostComponent) childComp!: PostComponent;
-
-  constructor() {
-    console.log("constructor(): " + this.childComp);
-  }
-
-  ngAfterViewInit(): void {
-    console.log("ngAfterViewInit: " + this.childComp.title);
-    console.log("ngAfterViewInit: " + this.childComp.childMessage);
-    console.log("ngAfterViewInit: " + this.childComp.fromParent);
-    console.log("ngAfterViewInit: " + this.childComp.postParentMessage);
-
-    this.message = this.childComp.childMessage;
-  }
-
-  receiveMessage($event: string) {
-    this.fromChildOutput = $event;
-
-  }
+export class AppComponent {
+  message: string = 'Message from Typescript Component File';
 }
