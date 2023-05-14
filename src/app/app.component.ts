@@ -11,13 +11,14 @@ export class AppComponent {
   bool: boolean = false;
 
   userNamex: string = '';
+  textValue: string = 'Value is coming from component'
 
   buttonClick() {
     console.log("Button click event worked");
   }
 
   onKeyUp() {
-    console.log(this.userNamex);
+    console.log(this.textValue);
 
   }
 }
