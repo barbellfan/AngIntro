@@ -7,5 +7,5 @@
 <!-- event bindingvsc -->
 <button (click)="buttonClick()">Click me</button>
 
-<!-- event filtering -->
-<input type="text" (keyup.enter)="onKeyUp(username.value)" #username >
+<!-- two way data binding -->
+<input type="text" [(ngModel)]="userNamex" (keyup.enter)="onKeyUp()">

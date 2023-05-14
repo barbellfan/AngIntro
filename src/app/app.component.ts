@@ -10,12 +10,14 @@ import { PostComponent } from './post/post.component';
 export class AppComponent {
   bool: boolean = false;
 
+  userNamex: string = '';
+
   buttonClick() {
     console.log("Button click event worked");
   }
 
-  onKeyUp(username: string) {
-    console.log(username);
+  onKeyUp() {
+    console.log(this.userNamex);
 
   }
 }
