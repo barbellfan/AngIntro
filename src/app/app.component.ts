@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ElementRef, ViewChild } from '@angular/core';
 
 import { PostComponent } from './post/post.component';
 
@@ -8,17 +8,23 @@ import { PostComponent } from './post/post.component';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  bool: boolean = false;
+  postFormText: string = '';
+  postDetailsText: string = '';
+  postImageUrl: string = '';
+  postUrl: string = '';
+  myColor: string = 'yellow';
+  isChecked: boolean = false;
 
-  userNamex: string = '';
-  textValue: string = 'Value is coming from component'
+  toggleChecked($event: Event) {
+    if (this.isChecked) {
+      this.myColor = 'yellow';
+    } else {
+      this.myColor = 'white';
+    }
 
-  buttonClick() {
-    console.log("Button click event worked");
-  }
-
-  onKeyUp() {
-    console.log(this.textValue);
-
+    this.isChecked = !this.isChecked;
   }
 }
+// finish up the task, then check the solution video
+// sample image link
+// https://smaller-pictures.appspot.com/images/dreamstime_xxl_65780868_small.jpg

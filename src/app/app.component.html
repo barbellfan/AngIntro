@@ -1,13 +1,22 @@
-<!-- class binding -->
-<h1 [class.text-red]="bool">Angular App</h1>
-
-<!-- style binding -->
-<h1 [style.color] = " bool ? 'red' : 'blue'" >Style Binding</h1>
-
-<!-- event bindingvsc -->
-<button (click)="buttonClick()">Click me</button>
-
-<!-- one way and two way data binding -->
-<input type="text" [value]="textValue" (keyup.enter)="onKeyUp()">
-
-<input type="text" [(ngModel)]="textValue" (keyup.enter)="onKeyUp()">
+<h1 class="center">Post Form</h1>
+<div class="center">&nbsp;</div>
+<div class="center">&nbsp;</div>
+<div class="center">&nbsp;</div>
+<div class="center"><input type="text" placeholder="Post Title" [(ngModel)]="postFormText"></div>
+<div class="center">&nbsp;</div>
+<div class="center"><textarea cols="40" rows="10" placeholder="Post Details" [(ngModel)]="postDetailsText"></textarea></div>
+<div class="center">&nbsp;</div>
+<div class="center"><input type="text" placeholder="Post Image URL" [(ngModel)]="postImageUrl"></div>
+<div class="center">&nbsp;</div>
+<div class="center"><input type="text" placeholder="Post URL" [(ngModel)]="postUrl"></div>
+<div class="center">&nbsp;</div>
+<div class="center"><input type="checkbox" [(ngModel)]='isChecked' (change)="toggleChecked($event)">Add Background</div>
+<div class="center">&nbsp;</div>
+<div class="center">&nbsp;</div>
+<div class="center"><label style="background-color: [myColor];">{{ postFormText }}</label></div>
+<div class="center">&nbsp;</div>
+<div class="center"><label>{{ postDetailsText }}</label></div>
+<div class="center">&nbsp;</div>
+<div class="center"><img src="{{ postImageUrl }}" alt=""></div>
+<div class="center">&nbsp;</div>
+<div class="center" style="border: 1px;"><a href="{{ postUrl }}" target="_blank">More Details</a></div>
