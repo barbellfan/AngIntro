@@ -18,7 +18,8 @@
 <button (click)="addNew()">Add New Data</button>
 
 <ul>
-  <li *ngFor="let post of objArray">{{ post.postTitle }}
-    <button (click)="onDelete(post)">Delete</button>
+  <li *ngFor="let post of objArray; let i = index">
+    {{ i }} {{ post.postTitle }}
+    <button (click)="onDelete(i)">Delete</button>
   </li>
 </ul>
