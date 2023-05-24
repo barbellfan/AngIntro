@@ -10,7 +10,7 @@ import { Component } from '@angular/core';
 
 export class AppComponent {
   postArray: Array<string> = ['Post 1', 'Post 2', 'Post 3', 'Post 4', 'Post 5'];
-  objArray: Array<any> = [
+  objArray: Array<{id: number, postTitle: string}> = [
     { id: 1, postTitle: "Post 1" },
     { id: 2, postTitle: "Post 2" },
     { id: 3, postTitle: "Post 3" },
