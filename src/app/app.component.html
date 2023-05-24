@@ -8,7 +8,13 @@
   <li>{{postArray[4]}}</li>
 </ul>
 
-
+<p>Fecthed using the ngFor directive</p>
 <ul>
   <li *ngFor="let post of postArray">{{ post }}</li>
+</ul>
+
+<p>Fetching Object Array</p>
+
+<ul>
+  <li *ngFor="let post of objArray">{{ post | json }}</li>
 </ul>
