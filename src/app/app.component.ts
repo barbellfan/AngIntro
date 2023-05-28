@@ -8,13 +8,11 @@ import { Component } from '@angular/core';
 
 export class AppComponent {
 
-  postArray: Array<string> = [
-    "post 1",
-    "post 2",
-    "post 3",
-    "post 4",
-    "post 5",
-  ];
+  userdetails = {
+    name: "User 1",
+    city: "New York",
+    country: "US"
+  }
 
   constructor() {
 
