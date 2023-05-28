@@ -1,8 +1,14 @@
-.main {
-  color: red;
-  text-transform: uppercase;
+.form-area {
+  margin-top: 50px;
+  text-align: center;
 }
 
-.text-weight {
-  font-weight: bold;
+.table-area {
+  position: absolute;
+  left: 30%;
+  text-align: center;
+}
+
+h4 {
+  text-align: center;
 }
