@@ -55,5 +55,16 @@ Angular Udemy Course</h1>
   color: isActive ? 'red' : 'black',
   textTransform: isActive ? 'uppercase' : 'lowercase'
 }"
-
 >NgStyle Directive</h1>
+
+<h1
+[class.main] = "isActive"
+[class.text-weight] = "isActive"
+>Class binding</h1>
+
+<h1
+[ngClass] = "{
+  'main' : isActive,
+  'text-weight' : isActive
+}"
+>ngClass Directive</h1>
