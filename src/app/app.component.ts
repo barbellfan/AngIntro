@@ -7,26 +7,12 @@ import { Component } from '@angular/core';
 })
 
 export class AppComponent {
-  name: string = '';
-  email: string = '';
-  address: string = '';
 
-  userArray: Array<any> = [];
+  title: string = 'Angular course';
 
   constructor() {
 
   }
 
-  onClick() {
-    this.userArray.push({
-      "name": this.name,
-      "email": this.email,
-      "address": this.address
-    });
-  }
-
-  onDelete(i:number) {
-    this.userArray.splice(i, 1);
-  }
 
 }
