@@ -7,7 +7,11 @@ import { Component } from '@angular/core';
 })
 
 export class AppComponent {
-  today: Date = new Date();
+
+  postObj = {
+    id: 1,
+    postTitle: "Post 1"
+  }
 
   constructor() {
 
