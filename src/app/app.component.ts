@@ -8,10 +8,6 @@ import { Component } from '@angular/core';
 
 export class AppComponent {
 
-  postObj = {
-    id: 1,
-    postTitle: "Post 1"
-  }
 
   constructor() {
 
