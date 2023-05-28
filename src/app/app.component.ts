@@ -9,6 +9,8 @@ import { Component } from '@angular/core';
 export class AppComponent {
 
   title: string = 'Angular course';
+  count: number = 285645;
+  dcValue: number = 3.87654;
 
   constructor() {
 
