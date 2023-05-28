@@ -4,3 +4,11 @@
 <h1>{{ count | number }}</h1>
 
 <h1>{{ dcValue | number: '1.2-2' }}</h1>
+
+<!-- currency pipe -->
+<h1>Default currency: {{ price | currency }}</h1>
+<h1>Show currency symbol: {{ price | currency: 'USD': true }}</h1>
+<h1>Show currency code: {{ price | currency: 'USD': false }}</h1>
+<h1>Show currency code rounded: {{ price | currency: 'USD': false : '2.1-1' }}</h1>
+<h1>Show Canadian dollars: {{ price | currency: 'CAD' }}</h1>
+<h1>Show Japanese Yen: {{ price | currency: 'JPY' }}</h1>
