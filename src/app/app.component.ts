@@ -14,6 +14,8 @@ export class AppComponent {
     country: "US"
   }
 
+  dummyText: string = 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod modi mollitia ut corporis, quaerat pariatur, adipisci minus tenetur ratione recusandae est totam maxime labore magnam perspiciatis quibusdam necessitatibus natus vel!';
+
   constructor() {
 
   }
