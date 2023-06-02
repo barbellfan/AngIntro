@@ -1,10 +1,10 @@
 import  { Injectable } from '@angular/core';
 
-export class PostService {
+@Injectable({
+  providedIn: 'root',
+})
 
-  @Injectable({
-    providedIn: 'root',
-  })
+export class PostService {
 
   postList: Array<any> = [
     { id: 1, postTitle: "Post 1"},
@@ -14,4 +14,6 @@ export class PostService {
     { id: 5, postTitle: "Post 5"},
     { id: 6, postTitle: "Post 6"},
   ];
+
+  constructor() {}
 }
