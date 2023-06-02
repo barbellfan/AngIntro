@@ -15,5 +15,7 @@ export class PostService {
     { id: 6, postTitle: "Post 6"},
   ];
 
-  constructor() {}
+  addPost(data: any) {
+    this.postList.push(data);
+  }
 }

@@ -15,4 +15,12 @@ export class PostComponent {
     this.posts = postService.postList;
   }
 
+  addNewData() {
+    let newPost = {
+      id: 7,
+      postTitle: "Post 7"
+    }
+
+    this.postService.addPost(newPost);
+  }
 }
