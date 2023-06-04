@@ -3,9 +3,18 @@
   <form #f = 'ngForm' (submit)="onSubmit(f)">
 
     <div class="form-group">
-      <label>First Name</label>
-      <input type="text" placeholder="Full Name" class="form-control" name="fullName" ngModel>
+      <label>Full Name</label>
+      <input
+      type="text"
+      placeholder="Full Name"
+      class="form-control"
+      name="fullName"
+      ngModel
+      #fullName='ngModel'
+      (change)="getValue(fullName)"
+      required>
     </div>
+    <div class="alert alert-danger" *ngIf="fullName.touched && fullName.invalid">Full name is required</div>
     <div class="form-group">
       <label>Email</label>
       <input type="email" placeholder="Email" class="form-control" name="email" ngModel>
