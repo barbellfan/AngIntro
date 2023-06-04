@@ -10,7 +10,7 @@ import { FormControl, NgForm, NgModel } from '@angular/forms';
 export class AppComponent {
 
   onSubmit(f: NgForm) {
-    console.log(f);
+    console.log(f.value);
 
   }
 
