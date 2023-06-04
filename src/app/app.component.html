@@ -14,9 +14,16 @@
       (change)="getValue(fullName)"
       required
       [ngClass]="{ 'is-invalid' : fullName.touched && fullName.invalid}"
+      minlength="5"
+      maxlength="10"
       >
     </div>
-    <div class="alert alert-danger" *ngIf="fullName.touched && fullName.invalid">Full name is required</div>
+    <div *ngIf="fullName.errors?.['required']">
+      <div class="alert alert-danger" *ngIf="fullName.touched && fullName.invalid">Full name is required</div>
+    </div>
+    <div *ngIf="fullName.errors?.['minlength']">
+      <div class="alert alert-danger" *ngIf="fullName.touched && fullName.invalid">Full name must be at least 5 chars</div>
+    </div>
     <div class="form-group">
       <label>Email</label>
       <input type="email" placeholder="Email" class="form-control" name="email" ngModel>
