@@ -12,7 +12,9 @@
       ngModel
       #fullName='ngModel'
       (change)="getValue(fullName)"
-      required>
+      required
+      [ngClass]="{ 'is-invalid' : fullName.touched && fullName.invalid}"
+      >
     </div>
     <div class="alert alert-danger" *ngIf="fullName.touched && fullName.invalid">Full name is required</div>
     <div class="form-group">
