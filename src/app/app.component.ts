@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { FormControl, NgForm, NgModel } from '@angular/forms';
+import { FormControl, NgForm, NgModel, FormGroup } from '@angular/forms';
 
 @Component({
   selector: 'app-root',
@@ -9,6 +9,15 @@ import { FormControl, NgForm, NgModel } from '@angular/forms';
 
 export class AppComponent {
 
+  form: any;
+
+  constructor() {
+    this.form = new FormGroup({
+      fullName: new FormControl(),
+      email: new FormControl(),
+      addres: new FormControl()
+    });
+  }
   onSubmit(f: NgForm) {
     console.log(f);
 

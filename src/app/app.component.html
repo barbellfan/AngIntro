@@ -1,6 +1,6 @@
 <div class="container mt-5">
   <div class="form-area">
-    <h1>Template Driven Form</h1>
+    <h1 class="text-center">Template Driven Form</h1>
     <form #f="ngForm" (ngSubmit)="onSubmit(f)">
       <div class="form-group">
         <label>Full Name</label>
@@ -89,8 +89,8 @@
     </form>
   </div>
   <div class="form-area">
-    <h1>Reactive Form</h1>
-    <form>
+    <h1 class="text-center">Reactive Form</h1>
+    <form [formGroup] = "form">
       <div class="form-group">
         <label>Full Name</label>
         <input
@@ -98,6 +98,7 @@
           placeholder="Full Name"
           class="form-control"
           name="fullName"
+          formControlName="fullName"
         />
       </div>
       <div class="form-group">
@@ -107,6 +108,7 @@
           placeholder="Email"
           class="form-control"
           name="email"
+          formControlName="email"
         />
       </div>
       <div class="form-group">
@@ -117,6 +119,7 @@
           placeholder="Address"
           class="form-control"
           name="address"
+          formControlName="address"
         ></textarea>
       </div>
 
