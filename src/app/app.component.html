@@ -100,9 +100,9 @@
           name="fullName"
           formControlName="fullName"
         />
-        <div class="alert alert-danger" *ngIf="fullName.touched && fullName.invalid">
-          <div *ngIf="fullName.errors?.['required']">The full name is required.</div>
-          <div *ngIf="fullName.errors?.['minlength']">The full name must be at least 5 chars.</div>
+        <div class="alert alert-danger" *ngIf="fullname.touched && fullname.invalid">
+          <div *ngIf="fullname.errors?.['required']">The full name is required.</div>
+          <div *ngIf="fullname.errors?.['minlength']">The full name must be at least 5 chars.</div>
         </div>
       </div>
       <div class="form-group">
@@ -114,6 +114,11 @@
           name="email"
           formControlName="email"
         />
+        <div class="alert alert-danger" *ngIf="Email.touched && Email.invalid">
+          <div *ngIf="Email.errors?.['required']">Email is required.</div>
+          <div *ngIf="Email.errors?.['email']">Email must be in correct format.</div>
+        </div>
+
       </div>
       <div class="form-group">
         <label>Address</label>
@@ -125,6 +130,10 @@
           name="address"
           formControlName="address"
         ></textarea>
+        <div class="alert alert-danger" *ngIf="Address.touched && Address.invalid">
+          <div *ngIf="Address.errors?.['required']">The address is required.</div>
+        </div>
+
       </div>
 
       <button type="submit" class="btn btn-primary" >
