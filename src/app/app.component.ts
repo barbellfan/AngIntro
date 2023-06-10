@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { FormControl, NgForm, NgModel, FormGroup } from '@angular/forms';
+import { FormControl, NgForm, NgModel, FormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-root',
@@ -13,9 +13,9 @@ export class AppComponent {
 
   constructor() {
     this.form = new FormGroup({
-      fullName: new FormControl(),
+      fullName: new FormControl("", [Validators.required, Validators.minLength(5)]),
       email: new FormControl(),
-      addres: new FormControl()
+      address: new FormControl()
     });
   }
   onSubmit(f: NgForm) {

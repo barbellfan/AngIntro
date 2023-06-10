@@ -100,6 +100,10 @@
           name="fullName"
           formControlName="fullName"
         />
+        <div class="alert alert-danger" *ngIf="fullName.touched && fullName.invalid">
+          <div *ngIf="fullName.errors?.['required']">The full name is required.</div>
+          <div *ngIf="fullName.errors?.['minlength']">The full name must be at least 5 chars.</div>
+        </div>
       </div>
       <div class="form-group">
         <label>Email</label>
