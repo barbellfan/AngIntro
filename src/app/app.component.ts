@@ -25,6 +25,10 @@ export class AppComponent {
   }
   onSubmit(f: NgForm) {
     console.log(f);
+  }
+
+  onSubmitx() {
+    console.log(this.form.value);
 
   }
 
