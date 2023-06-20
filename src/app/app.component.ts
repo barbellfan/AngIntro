@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { FormControl, NgForm, NgModel, FormGroup, Validators } from '@angular/forms';
+import { FormControl, NgForm, NgModel, FormGroup, Validators, FormArray } from '@angular/forms';
 
 @Component({
   selector: 'app-root',
@@ -29,7 +29,9 @@ export class AppComponent {
           Validators.pattern(this.contactRegex)
         ]),
       }),
+      skills: new FormArray([]),
     });
+
   }
 
   onSubmit(f: NgForm) {
@@ -39,6 +41,16 @@ export class AppComponent {
   onSubmitx() {
     console.log(this.form.value);
 
+  }
+
+  addSkills(skills: HTMLInputElement) {
+    this.Skills.push(
+      new FormControl(skills.value)
+    );
+
+    skills.value = '';
+
+    console.log(this.Skills.value);
   }
 
   get fullname() {
@@ -59,6 +71,16 @@ export class AppComponent {
 
   get Contact() {
     return this.form.get('contactDetails.contactNo');
+  }
+
+  get Skills() {
+    return this.form.get('skills') as FormArray;
+  }
+
+  removeSkills(index: number) {
+    console.log("removeSkills(): " + index);
+
+    this.Skills.removeAt(index);
   }
 
   getValue(ff: NgModel) {
