@@ -11,6 +11,9 @@
     <div *ngIf="fc.username.errors?.minlength">
       <div class="alert alert-danger" *ngIf="fc.username.touched && fc.username.invalid">Username must be at least 5 chars.</div>
     </div>
+    <div *ngIf="fc.username.errors?.nospaceValidator">
+      <div class="alert alert-danger" *ngIf="fc.username.touched && fc.username.invalid">Username cannot have spaces.</div>
+    </div>
 
     <div class="form-group">
       <label>Password</label>
